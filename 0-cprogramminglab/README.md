@@ -1,0 +1,54 @@
+This is the handout directory for the 15-213 C Lab. 
+
+# Running the autograders:
+
+Before running the autograders, compile your code to create the testing program 
+
+```
+    linux> make
+```
+
+Check the correctness of your code:
+
+```
+    linux> make test
+```
+
+# Using qtest:
+
+qtest provides a command interpreter that can create and manipulate queues.
+
+Run `./qtest -h` to see the list of command-line options
+
+When you execute `./qtest`, it will give a command prompt `cmd>`.  Type
+`help` to see a list of available commands
+
+
+# Files
+
+## You will handing in these two 
+| File    | Description                                                                 |
+|---------|-----------------------------------------------------------------------------|
+| queue.h | Modified version of declarations including new fields you want to introduce |
+| queue.c | Modified version of queue code to fix deficiencies of original code         |
+
+## Tools for evaluating your queue code
+| File       | Description                                                      |
+|------------|------------------------------------------------------------------|
+| Makefile   | Builds the evaluation program qtest                              |
+| README.md  | This file                                                        |
+| driver.py* | The C lab driver program, runs qtest on a standard set of traces |
+
+## Helper files
+| File          | Description                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| console.{c,h} | Implements command-line interpreter for qtest                               |
+| report.{c,h}  | Implements printing of information at different levels of verbosity         |
+| harness.{c,h} | Customized version of malloc and free to provide rigorous testing framework |
+| qtest.c       | Code for qtest                                                              |
+
+## Trace files
+| File                    | Description                                                                                                                                                                                                                           |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| traces/trace-XX-CAT.cmd | Traces used by the driver. These are input files for qtest. They are short and simple. We encourage to study them to see what tests are being performed. XX is the trace number (1-15). CAT describes the general nature of the test. |
+| traces/trace-eg.cmd     | A simple, documented trace file to demonstrate the operation of qtest                                                                                                                                                                 |

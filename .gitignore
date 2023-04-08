@@ -1,3 +1,15 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+!Makefile
+!README
+
 # Prerequisites
 *.d
 
@@ -44,7 +56,6 @@
 
 # Kernel Module Compile Results
 *.mod*
-*.cmd
 .tmp_versions/
 modules.order
 Module.symvers
